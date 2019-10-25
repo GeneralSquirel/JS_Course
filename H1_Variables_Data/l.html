@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <!-- assignment 1 -->
+  <h3>assignment 1</h3>
+  <button id="Button1" type="button" onclick="Myfunction()">click Here!</button>
+
+  <!-- assignment 2 -->
+  <h3>assignment 2</h3>
+  <button id="Button1" type="button" onclick="alert('Rowan Westenberg')">click Here!</button>
+
+  <!-- assignment 3 -->
+  <h3>assignment 3</h3>
+  <p id="demo">JavaScript can change the style of an HTML element.</p>
+  <button type="button" onclick="Myfunction2()">red Text!</button>
+  <button type="button" onclick="Myfunction3()">green Text!</button>
+
+  <!-- assignment 4 -->
+  <h3>assignment 4</h3>
+  <h4 id="myH"></h4>
+  <p id="myP"></p>
+  <p>The line starting with // is not executed.</p>
+
+  <!-- assignment 5 -->
+  <h3>assignment 5</h3>
+  <p>noscript is used if the browser doesnt support the JavaScript
+  when used in an head element  must contain only link, style, and meta elements.</p>
+
+  <!-- assignment 6 -->
+
+</body>
+</html>
+
+<script type="text/javascript">
+  function Myfunction(){
+    document.getElementById('Button1').innerHTML = "RowanWestenberg"
+  }
+
+  function Myfunction2(){
+    document.getElementById('demo').style.color='red'
+  }
+
+  function Myfunction3(){
+    document.getElementById('demo').style.color='green'
+  }
+  document.getElementById("myH").innerHTML = "My First Page";
+  document.getElementById("myP").innerHTML = "My first paragraph.";
+</script>

@@ -5,13 +5,14 @@
     <title></title>
   </head>
   <body>
-    Number X:<input type="number" id="input1" value="1"><br>
-    Number Y:<input type="number" id="input2" value="2"><br>
-    <button type="button" onclick="calculate()">Answer</button><br>
+    Number X:<input type="number" id="input1"><br>
+    Number Y:<input type="number" id="input2"><br>
+    <button type="button" onclick="calculate()">Answer?</button><br>
     <p id="output1"> </p>
     <p id="output2"> </p>
     <p id="output3"> </p>
     <p id="output4"> </p>
+    <p id="output5"> </p>
   </body>
   <script type="text/javascript">
 
@@ -25,17 +26,25 @@
       var minus = num1-num2;
       var devide = num1/num2;
       var multiply = num1*num2;
-      console.log(num1);
-      console.log(num2);
 
       if (isNaN(num1) || isNaN(num2) || num1 == null || num1 == null || plus == null || minus == null || devide == null || multiply == null){
-        alert("There is a NaN or Null variable");
+        alert("Some thing went wrong with the calculation. Please Try again.");
       }
       else{
-      document.getElementById("output1").innerHTML = "Plu"+ plus;
-      document.getElementById("output2").innerHTML = minus;
-      document.getElementById("output3").innerHTML = devide;
-      document.getElementById("output4").innerHTML = multiply;
+      document.getElementById("output1").innerHTML = "addition: " + plus;
+      document.getElementById("output2").innerHTML = "subtraction: " + minus;
+      document.getElementById("output3").innerHTML = "division: " + devide;
+      document.getElementById("output4").innerHTML = "multiplication: " + multiply;
+
+      if (num1 > num2){
+        document.getElementById("output5").innerHTML = "firts number is higher";
+      }
+      else if (num1 < num2){
+        document.getElementById("output5").innerHTML = "second number is higher";
+      }
+      else{
+        document.getElementById("output5").innerHTML = "the numbers are equal";
+      }
     }
     }
   </script>

@@ -113,7 +113,10 @@ function intrests(){
     newAmount = amount * int;
     amount = newAmount;
     i++;
+    console.log(i);
+    document.getElementById("eachYear").innerHTML += "<li>" + i + " Year(s): " + amount.toFixed(2) + "</li>";
   }
+
   document.getElementById("Intrest").innerHTML =  "end of when doubled: " + newAmount.toFixed(2);
   document.getElementById("yearly").innerHTML =  "Yearly intrest: " + int;
   document.getElementById("IntYears").innerHTML = "years of intrest: " + i;

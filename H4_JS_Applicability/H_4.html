@@ -6,8 +6,27 @@
     <script src="H_4.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>img changer</h1>
-    <img id="image" src="1.png" value="1" height="400">
-    <button type="button" onclick="imgSwap()" name="button">Swap</button>
+    <div>
+      <h1>img changer</h1>
+      <img id="image" src="1.png" value="1" height="400">
+      <button type="button" onclick="imgSwap()" name="button">Swap</button>
+    </div>
+    <div class="knopdiv">
+      <button type="button" id="knopje" onclick="newButton()">click 1</button>
+    </div>
+
+    <button type="button" onclick="styleChange()">style change</button>
+    <p id="txt">Helllo other humans</p>
+
+    <div>
+      <form>
+        voornaam:<input id="input1" type="text" placeholder="voornaam">
+        achternaam:<input id="input2" type="text" placeholder="achternaam">
+        <button type="button" id="knop" onclick="showForm()">send</button>
+        <p id="formOut"></p>
+      </form>
+
+    </div>
+
   </body>
 </html>

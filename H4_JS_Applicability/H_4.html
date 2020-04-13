@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Chapter 4</title>
-    <script src="H_4.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <div>
-      <h1>img changer</h1>
-      <img id="image" src="1.png" value="1" height="400">
-      <button type="button" onclick="imgSwap()" name="button">Swap</button>
-    </div>
-    <div class="knopdiv">
-      <button type="button" id="knopje" onclick="newButton()">click 1</button>
-    </div>
+<head>
+  <meta charset="utf-8">
+  <title>Chapter 4</title>
+  <script src="H_4.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="div">
+    <h1>img changer</h1>
+    <img id="image" src="1.png" value="1" height="400">
+    <button type="button" onclick="imgSwap()" name="button">Swap</button>
+  </div>
 
+  <div class="knopdiv div">
+    <button type="button" id="knopje" onclick="newButton()">click 1</button>
+  </div>
+
+  <div class="div">
     <button type="button" onclick="styleChange()">style change</button>
     <p id="txt">Helllo other humans</p>
+  </div>
+  <div class="div">
+    <form>
+      voornaam:<input id="input1" type="text" placeholder="voornaam">
+      achternaam:<input id="input2" type="text" placeholder="achternaam">
+      <button type="button" id="knop" onclick="showForm()">send</button>
+      <p id="formOut"></p>
+    </form>
+  </div>
 
-    <div>
-      <form>
-        voornaam:<input id="input1" type="text" placeholder="voornaam">
-        achternaam:<input id="input2" type="text" placeholder="achternaam">
-        <button type="button" id="knop" onclick="showForm()">send</button>
-        <p id="formOut"></p>
-      </form>
+<div class="div">
+  <select id="items1">
+  <option value="item-1-1">Item 1.1</option>
+  <option value="item-1-2">Item 1.2</option>
+  <option value="item-1-3">Item 1.3</option>
+  <option value="item-1-4">Item 1.4</option>
+</select>
+<select id="items2">
+  <option value="item-2-1">Item 2.1</option>
+  <option value="item-2-2">Item 2.2</option>
+  <option value="item-2-3">Item 2.3</option>
+  <option id="item-2-4">Item 2.4</option>
+</select>
 
-    </div>
+<button type="button" onclick="showChoice()" name="button">Show choice</button>
+<p id=choices></p>
+</div>
 
-  </body>
+<div class="div">
+
+</div>
+
+  <style media="screen">
+  body{
+    margin: 0%;
+    padding: 0%;
+  }
+  .div{
+    margin-bottom:4%;
+    background-color: lightgrey;
+  }
+</style>
+</body>
 </html>

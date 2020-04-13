@@ -37,7 +37,6 @@ function newButton(){
 
   button.setAttributeNode(bAttribute);
 }
-
 function clicked(){
 alert("het is gelukt");
 }
@@ -59,4 +58,11 @@ function showForm(){
 
   var formOut = document.getElementById("formOut");
   formOut.innerHTML = voornaam + achternaam;
+}
+//assignment 5
+function showChoice(){
+  var choice1 = document.getElementById('items1').value;
+  var choice2 = document.getElementById('items2').value;
+
+  document.getElementById('choices').innerHTML = choice1 +" "+ choice2;
 }

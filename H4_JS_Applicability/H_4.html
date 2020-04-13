@@ -5,21 +5,28 @@
   <title>Chapter 4</title>
   <script src="H_4.js" charset="utf-8"></script>
 </head>
-<body>
-  <div class="div">
+<style media="screen">
+body{margin: 0%; padding:0%;}
+.div{background-color: lightblue;margin-bottom:1%;}
+.div1{background-color: lightgrey;margin-bottom:1%;}
+</style>
+<body onload="checkCookie()">
+  <!-- assignment 1 -->
+  <div class="div1">
     <h1>img changer</h1>
     <img id="image" src="1.png" value="1" height="400">
     <button type="button" onclick="imgSwap()" name="button">Swap</button>
   </div>
-
+<!-- assignment 2 -->
   <div class="knopdiv div">
     <button type="button" id="knopje" onclick="newButton()">click 1</button>
   </div>
-
-  <div class="div">
+  <!-- assignment 3 -->
+  <div class="div1">
     <button type="button" onclick="styleChange()">style change</button>
     <p id="txt">Helllo other humans</p>
   </div>
+  <!-- assignment 4 -->
   <div class="div">
     <form>
       voornaam:<input id="input1" type="text" placeholder="voornaam">
@@ -28,8 +35,8 @@
       <p id="formOut"></p>
     </form>
   </div>
-
-<div class="div">
+<!-- assignment 5 -->
+<div class="div1">
   <select id="items1">
   <option value="item-1-1">Item 1.1</option>
   <option value="item-1-2">Item 1.2</option>
@@ -46,20 +53,51 @@
 <button type="button" onclick="showChoice()" name="button">Show choice</button>
 <p id=choices></p>
 </div>
-
+<!-- assignment 6 -->
 <div class="div">
-
+<table id="uitvoerTabel">
+  <tr>
+    <th>Voornaam</th><th>Achternaam</th><th>Punten</th>
+  </tr>
+  <tr>
+    <td>Johan</td><td>cruijf</td><td>47</td>
+  </tr>
+  <tr>
+    <td>frans</td><td>bauer</td><td>54</td>
+  </tr>
+  <tr>
+    <td>willlem</td><td>van oranje</td><td>80</td>
+  </tr>
+  <tr>
+    <td>sellah</td><td>source</td><td>93</td>
+  </tr>
+</table>
+<form id="invoerFormulier" action="">
+  	Voornaam: <input type="text" name="Vnaam" id="Voornaam">
+    Achternaam: <input type="text" name="Anaam" id="Achternaam">
+    Punten: <input type="text" name="Points" id="Punten">
+</form>
+<button id="addPerson" onclick="voegGegevenstoe()"> Voeg persoon toe</button>
+</div>
+<!-- assignment 7 -->
+<div class="div1">
+  naam: <input type="text" id="name" oninput="allCheck()">
+  mail: <input type="text" id="mail" oninput="allCheck()">
+  land:
+  <select id="land" oninput="allCheck()">
+    <option value="0">Kies land</option>
+    <option value="NL">NL</option>
+    <option value="BE">BE</option>
+    <option value="DE">DE</option>
+  </select>
+  <ul id="list">
+    <li id="nameLen"></li>
+    <li id="checkAT"></li>
+    <li id="checkPoint"></li>
+    <li id="checkLen"></li>
+    <li id="checkland"></li>
+  </ul>
 </div>
 
-  <style media="screen">
-  body{
-    margin: 0%;
-    padding: 0%;
-  }
-  .div{
-    margin-bottom:4%;
-    background-color: lightgrey;
-  }
-</style>
 </body>
 </html>

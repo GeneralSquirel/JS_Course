@@ -2,41 +2,83 @@
 function checkPerson(){
   var fName = document.getElementById("firtsName").value;
   var sName = document.getElementById("surName").value;
-  var point = document.getElementById("Points").value
-  //error list
-  var one = document.getElementById("one");
-  var two = document.getElementById("two");
-  var three = document.getElementById("three");
-  var four = document.getElementById("four");
-  var five = document.getElementById("five");
+  var points = document.getElementById("Points").value;
+  var list = document.getElementById("list");
+  var checked = 0;
 
-  //lenght check
-  if (fName.length > 3){
-    one.innerHTML = "firtsName is at least 3 charachters long";
-    //charachter check
-    if (/^[a-z]+$/i.test(fName) == true) {
-      two.innerHTML = "Firstname contains no special charachters";
-      console.log("Firstname checked: " + fName);
-    }else {two.innerHTML = "Firstname contains unusable charachters";}
-  }else{one.innerHTML = "firtsName must be at least 3 charachters long";}
-
-
-
-  //lenght check
-  if (sName.length > 3){
-    three.innerHTML = "surName is at least 3 charachters long";
-    //charachter check
-    if (/^[a-z]+$/i.test(sName) == true) {
-      four.innerHTML = "surName contains no special charachters";
-      console.log("surName checked: " + sName);
-    }
-    else {four.innerHTML = "surName contains unusable charachters";}
+  while (list.hasChildNodes()) {
+    list.removeChild(list.firstChild);
   }
-  else{three.innerHTML = "surName must be at least 3 charachters long";}
 
 
-  //is higher than zero and not NaN
-  // addPerson();
+  //lenght check
+  if (fName.length >= 3){checked++;
+//charachter check
+    if (/^[a-z]+$/i.test(fName) == true) {checked++;
+
+    }else {
+      //create list element with the error
+      var node = document.createElement("LI");
+      var textnode = document.createTextNode("Firstname contains unusable charachters");
+      node.appendChild(textnode);
+      list.appendChild(node);
+      checked--;
+
+    }
+  }else{
+    //create list element with the error
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode("firtsName must be at least 3 charachters long");
+    node.appendChild(textnode);
+    list.appendChild(node);
+    checked--;
+
+}
+
+
+
+  //lenght check
+  if (sName.length >= 3){checked++;
+      //charachter check
+    if (/^[a-z]+$/i.test(sName) == true) {checked++;}
+    else {
+      //create list element with the error
+      var node = document.createElement("LI");
+      var textnode = document.createTextNode("surName contains unusable charachters");
+      node.appendChild(textnode);
+      list.appendChild(node);
+      checked--;
+
+    }
+  }
+  else{
+    //create list element with the error
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode("surName must be at least 3 charachters long");
+    node.appendChild(textnode);
+    list.appendChild(node);
+    checked--;
+
+  }
+
+  //point between 1 & 100
+  if (points >= 1 && points <= 100) {checked++;}
+  else {
+    //create list element with the error
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode("The assigned point are to high or to low");
+    node.appendChild(textnode);
+    list.appendChild(node);
+  }
+
+if (checked == 5) {
+// console.log(checked);
+// console.log("Firstname checked: " + fName);
+// console.log("surName checked: " + sName);
+// console.log("points checked: " + points);
+addPerson();
+}
+
 
 }
 
